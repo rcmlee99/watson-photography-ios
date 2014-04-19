@@ -19,6 +19,7 @@
 		966137441902D6D8007017B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9661372C1902D6D8007017B8 /* UIKit.framework */; };
 		9661374C1902D6D8007017B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9661374A1902D6D8007017B8 /* InfoPlist.strings */; };
 		9661374E1902D6D8007017B8 /* WatsonPhotographyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9661374D1902D6D8007017B8 /* WatsonPhotographyTests.m */; };
+		966137581902D73F007017B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966137571902D73F007017B8 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		966137491902D6D8007017B8 /* WatsonPhotographyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WatsonPhotographyTests-Info.plist"; sourceTree = "<group>"; };
 		9661374B1902D6D8007017B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9661374D1902D6D8007017B8 /* WatsonPhotographyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WatsonPhotographyTests.m; sourceTree = "<group>"; };
+		966137571902D73F007017B8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				966137371902D6D8007017B8 /* WPAppDelegate.h */,
 				966137381902D6D8007017B8 /* WPAppDelegate.m */,
+				966137571902D73F007017B8 /* Main.storyboard */,
 				9661373A1902D6D8007017B8 /* Images.xcassets */,
 				9661372F1902D6D8007017B8 /* Supporting Files */,
 			);
@@ -220,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966137581902D73F007017B8 /* Main.storyboard in Resources */,
 				966137331902D6D8007017B8 /* InfoPlist.strings in Resources */,
 				9661373B1902D6D8007017B8 /* Images.xcassets in Resources */,
 			);
