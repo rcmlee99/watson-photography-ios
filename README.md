@@ -32,7 +32,7 @@ This is a sample iOS application for the IBM Watson Mobile Developer Challenge.
 
 * **Images.xcassets** - All images used in the project are here. Including the splash screen and application icon image.
 
-* **Supporting Files/fake.json** - Fake data in case we don't have access to the Watson API, or network connectivity, or we want to test with a slightly faster version (network communication is slow). The data is based on the 'what is aperture?' question.
+* **Supporting Files/fake.json** - Fake data in case we don't have access to the Watson API, or lack network connectivity, or we want to test with a slightly faster version (network communication is slow). The data is based on the 'what is aperture?' question.
 
 * **Supporting Files/config.plist** - This is what `WPWatson.m` will read to find the username and password to access the Watson API. If there's no username or password, `fake.json` will be used as the data source instead.
 
@@ -44,7 +44,7 @@ This is a sample iOS application for the IBM Watson Mobile Developer Challenge.
 
 * **Classes/WPWatson.m** - Singleton that sends questions to the Watson API if a username and password are found in `Supporting Files/config.plist`, otherwise it returns data from `Supporting Files/fake.json`. Questions are cached, if a user asks the same question again it will get it from the cache instead of contacting the server again. The cache is cleared after the forth question. Apple's [NSURLConnection](https://developer.apple.com/library/ios/documentation/cocoa/reference/foundation/classes/NSURLConnection_Class/Reference/Reference.html) API is used to make an asynchronous request to Watson's API, it's the same library that popular libraries like [AFNetworking](https://github.com/AFNetworking/AFNetworking) use internally.
 
-* **Classes/WPWatsonQuestionResponse.m** - Simple object that will hold answers and evidence for a relevant to a specific question.
+* **Classes/WPWatsonQuestionResponse.m** - Simple object that will hold answers and evidence relevant to a specific question.
 
 * **Classes/WPUtils.m** - Class full of class methods for various miscellaneous operations. Here's code to: style the navigation bar, build a busy indicator, get a random number with a range, etc.
 
