@@ -70,10 +70,10 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     //Check if it is the right segue
-    if ([[segue identifier] isEqualToString:SEGUE_SHOW_RESULTS_DETAILS]) {
+    if ([segue.identifier isEqualToString:SEGUE_SHOW_RESULTS_DETAILS]) {
         
         //Access the detail view controller
-        WPResultsDetailsViewController *detailViewController = [segue destinationViewController];
+        WPResultsDetailsViewController *detailViewController = segue.destinationViewController;
         
         //Save the row number and send it to the detail view controller
         long row = [[self.tableView indexPathForSelectedRow] row];

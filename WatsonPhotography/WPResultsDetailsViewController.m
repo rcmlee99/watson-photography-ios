@@ -29,14 +29,14 @@
     WPWatson* watson = [WPWatson sharedManager];
     WPWatsonQuestionResponse* response = watson.responses[watson.currentQuestion];
     
-    //Get the current anser
+    //Get the current answer
     NSDictionary* currentAnswer = response.answers[self.row];
     
     //Set labels for text and confidence based on the current answer
     self.confidenceLabel.text = [NSString stringWithFormat:@"%@", currentAnswer[KEY_CONFIDENCE]];
     self.answerTextBox.text = currentAnswer[KEY_TEXT];
     
-    //Get a random number and use it to get a random evidence
+    //Get a random number and use it to populate the UI with a random evidence
     int randNum = [WPUtils randomNumberWithMax:response.evidence.count-1 andMin:0];
     self.evidenceTextBox.text = response.evidence[randNum][KEY_TEXT];
 }
