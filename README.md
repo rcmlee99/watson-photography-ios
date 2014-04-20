@@ -1,4 +1,4 @@
 watson-photography-ios
 ======================
 
-A sample iOS application for the IBM Watson Mobile Developer Challenge.
+Hello. A sample iOS application for the IBM Watson Mobile Developer Challenge.
