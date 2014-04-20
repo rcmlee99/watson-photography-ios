@@ -19,7 +19,7 @@ This is a sample iOS application for the IBM Watson Mobile Developer Challenge.
 
 **Q:** What if I want to run this on older versions of iOS?
 
-**A:** Change the deployment target. Project > Build Setting > Deployment tab > iOS Deployment Target.
+**A:** Change the deployment target: Project > Build Setting > Deployment tab > iOS Deployment Target.
 
 -----
 
