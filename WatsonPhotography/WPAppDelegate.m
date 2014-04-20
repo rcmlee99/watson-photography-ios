@@ -7,11 +7,15 @@
 //
 
 #import "WPAppDelegate.h"
+#import "WPUtils.h"
 
 @implementation WPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Style the navigation bar with a new background color and new text style
+    [WPUtils styleNavigationBar];
+    
     // Override point for customization after application launch.
     return YES;
 }

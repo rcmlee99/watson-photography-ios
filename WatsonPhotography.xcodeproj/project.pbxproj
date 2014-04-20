@@ -13,13 +13,23 @@
 		966137331902D6D8007017B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 966137311902D6D8007017B8 /* InfoPlist.strings */; };
 		966137351902D6D8007017B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 966137341902D6D8007017B8 /* main.m */; };
 		966137391902D6D8007017B8 /* WPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 966137381902D6D8007017B8 /* WPAppDelegate.m */; };
-		9661373B1902D6D8007017B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9661373A1902D6D8007017B8 /* Images.xcassets */; };
 		966137421902D6D8007017B8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966137411902D6D8007017B8 /* XCTest.framework */; };
 		966137431902D6D8007017B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966137281902D6D8007017B8 /* Foundation.framework */; };
 		966137441902D6D8007017B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9661372C1902D6D8007017B8 /* UIKit.framework */; };
 		9661374C1902D6D8007017B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9661374A1902D6D8007017B8 /* InfoPlist.strings */; };
 		9661374E1902D6D8007017B8 /* WatsonPhotographyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9661374D1902D6D8007017B8 /* WatsonPhotographyTests.m */; };
-		966137581902D73F007017B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966137571902D73F007017B8 /* Main.storyboard */; };
+		9661375B1902E4BB007017B8 /* WPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9661375A1902E4BB007017B8 /* WPMainViewController.m */; };
+		9661375D1902EB1D007017B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9661375C1902EB1D007017B8 /* Images.xcassets */; };
+		9661375F1902F211007017B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9661375E1902F211007017B8 /* Main.storyboard */; };
+		966137621902F3B9007017B8 /* WPResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966137611902F3B9007017B8 /* WPResultsTableViewController.m */; };
+		966137651902F5AD007017B8 /* WPResultsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 966137641902F5AD007017B8 /* WPResultsDetailsViewController.m */; };
+		9661376819031295007017B8 /* WPWatson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9661376719031295007017B8 /* WPWatson.m */; };
+		9661376B1903276B007017B8 /* WPWatsonQuestionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9661376A1903276B007017B8 /* WPWatsonQuestionResponse.m */; };
+		96A49CDE1903303E002D0DF7 /* fake.json in Resources */ = {isa = PBXBuildFile; fileRef = 96A49CDD1903303E002D0DF7 /* fake.json */; };
+		96A49CE1190343D1002D0DF7 /* WPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A49CE0190343D1002D0DF7 /* WPUtils.m */; };
+		96A49CE419034631002D0DF7 /* WPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A49CE319034631002D0DF7 /* WPConstants.m */; };
+		96A49CE619037A93002D0DF7 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96A49CE519037A93002D0DF7 /* config.plist */; };
+		96A49CEB1904247D002D0DF7 /* WPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A49CE0190343D1002D0DF7 /* WPUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,13 +53,29 @@
 		966137361902D6D8007017B8 /* WatsonPhotography-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WatsonPhotography-Prefix.pch"; sourceTree = "<group>"; };
 		966137371902D6D8007017B8 /* WPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPAppDelegate.h; sourceTree = "<group>"; };
 		966137381902D6D8007017B8 /* WPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPAppDelegate.m; sourceTree = "<group>"; };
-		9661373A1902D6D8007017B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		966137401902D6D8007017B8 /* WatsonPhotographyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatsonPhotographyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		966137411902D6D8007017B8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		966137491902D6D8007017B8 /* WatsonPhotographyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WatsonPhotographyTests-Info.plist"; sourceTree = "<group>"; };
 		9661374B1902D6D8007017B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9661374D1902D6D8007017B8 /* WatsonPhotographyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WatsonPhotographyTests.m; sourceTree = "<group>"; };
-		966137571902D73F007017B8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		966137591902E4BB007017B8 /* WPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMainViewController.h; sourceTree = "<group>"; };
+		9661375A1902E4BB007017B8 /* WPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMainViewController.m; sourceTree = "<group>"; };
+		9661375C1902EB1D007017B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9661375E1902F211007017B8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		966137601902F3B9007017B8 /* WPResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPResultsTableViewController.h; sourceTree = "<group>"; };
+		966137611902F3B9007017B8 /* WPResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPResultsTableViewController.m; sourceTree = "<group>"; };
+		966137631902F5AD007017B8 /* WPResultsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPResultsDetailsViewController.h; sourceTree = "<group>"; };
+		966137641902F5AD007017B8 /* WPResultsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPResultsDetailsViewController.m; sourceTree = "<group>"; };
+		9661376619031295007017B8 /* WPWatson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPWatson.h; sourceTree = "<group>"; };
+		9661376719031295007017B8 /* WPWatson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPWatson.m; sourceTree = "<group>"; };
+		966137691903276B007017B8 /* WPWatsonQuestionResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPWatsonQuestionResponse.h; sourceTree = "<group>"; };
+		9661376A1903276B007017B8 /* WPWatsonQuestionResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPWatsonQuestionResponse.m; sourceTree = "<group>"; };
+		96A49CDD1903303E002D0DF7 /* fake.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fake.json; sourceTree = "<group>"; };
+		96A49CDF190343D1002D0DF7 /* WPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPUtils.h; sourceTree = "<group>"; };
+		96A49CE0190343D1002D0DF7 /* WPUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPUtils.m; sourceTree = "<group>"; };
+		96A49CE219034631002D0DF7 /* WPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPConstants.h; sourceTree = "<group>"; };
+		96A49CE319034631002D0DF7 /* WPConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPConstants.m; sourceTree = "<group>"; };
+		96A49CE519037A93002D0DF7 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +137,11 @@
 			children = (
 				966137371902D6D8007017B8 /* WPAppDelegate.h */,
 				966137381902D6D8007017B8 /* WPAppDelegate.m */,
-				966137571902D73F007017B8 /* Main.storyboard */,
-				9661373A1902D6D8007017B8 /* Images.xcassets */,
+				9661375E1902F211007017B8 /* Main.storyboard */,
+				9661375C1902EB1D007017B8 /* Images.xcassets */,
 				9661372F1902D6D8007017B8 /* Supporting Files */,
+				96A49CEA1904243B002D0DF7 /* Controllers */,
+				96A49CE919042419002D0DF7 /* Classes */,
 			);
 			path = WatsonPhotography;
 			sourceTree = "<group>";
@@ -121,10 +149,12 @@
 		9661372F1902D6D8007017B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96A49CDD1903303E002D0DF7 /* fake.json */,
 				966137301902D6D8007017B8 /* WatsonPhotography-Info.plist */,
 				966137311902D6D8007017B8 /* InfoPlist.strings */,
 				966137341902D6D8007017B8 /* main.m */,
 				966137361902D6D8007017B8 /* WatsonPhotography-Prefix.pch */,
+				96A49CE519037A93002D0DF7 /* config.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -145,6 +175,34 @@
 				9661374A1902D6D8007017B8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96A49CE919042419002D0DF7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9661376619031295007017B8 /* WPWatson.h */,
+				9661376719031295007017B8 /* WPWatson.m */,
+				966137691903276B007017B8 /* WPWatsonQuestionResponse.h */,
+				9661376A1903276B007017B8 /* WPWatsonQuestionResponse.m */,
+				96A49CDF190343D1002D0DF7 /* WPUtils.h */,
+				96A49CE0190343D1002D0DF7 /* WPUtils.m */,
+				96A49CE219034631002D0DF7 /* WPConstants.h */,
+				96A49CE319034631002D0DF7 /* WPConstants.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		96A49CEA1904243B002D0DF7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				966137591902E4BB007017B8 /* WPMainViewController.h */,
+				9661375A1902E4BB007017B8 /* WPMainViewController.m */,
+				966137601902F3B9007017B8 /* WPResultsTableViewController.h */,
+				966137611902F3B9007017B8 /* WPResultsTableViewController.m */,
+				966137631902F5AD007017B8 /* WPResultsDetailsViewController.h */,
+				966137641902F5AD007017B8 /* WPResultsDetailsViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,9 +281,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966137581902D73F007017B8 /* Main.storyboard in Resources */,
+				96A49CDE1903303E002D0DF7 /* fake.json in Resources */,
+				9661375F1902F211007017B8 /* Main.storyboard in Resources */,
+				9661375D1902EB1D007017B8 /* Images.xcassets in Resources */,
 				966137331902D6D8007017B8 /* InfoPlist.strings in Resources */,
-				9661373B1902D6D8007017B8 /* Images.xcassets in Resources */,
+				96A49CE619037A93002D0DF7 /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,8 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966137651902F5AD007017B8 /* WPResultsDetailsViewController.m in Sources */,
+				9661375B1902E4BB007017B8 /* WPMainViewController.m in Sources */,
+				966137621902F3B9007017B8 /* WPResultsTableViewController.m in Sources */,
 				966137351902D6D8007017B8 /* main.m in Sources */,
+				96A49CE1190343D1002D0DF7 /* WPUtils.m in Sources */,
+				96A49CE419034631002D0DF7 /* WPConstants.m in Sources */,
+				9661376819031295007017B8 /* WPWatson.m in Sources */,
 				966137391902D6D8007017B8 /* WPAppDelegate.m in Sources */,
+				9661376B1903276B007017B8 /* WPWatsonQuestionResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A49CEB1904247D002D0DF7 /* WPUtils.m in Sources */,
 				9661374E1902D6D8007017B8 /* WatsonPhotographyTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +433,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WatsonPhotography/WatsonPhotography-Prefix.pch";
 				INFOPLIST_FILE = "WatsonPhotography/WatsonPhotography-Info.plist";
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -378,6 +451,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WatsonPhotography/WatsonPhotography-Prefix.pch";
 				INFOPLIST_FILE = "WatsonPhotography/WatsonPhotography-Info.plist";
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -442,6 +520,7 @@
 				966137531902D6D8007017B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		966137541902D6D8007017B8 /* Build configuration list for PBXNativeTarget "WatsonPhotographyTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +529,7 @@
 				966137561902D6D8007017B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

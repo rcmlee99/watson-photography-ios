@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "WPUtils.h"
 
 @interface WatsonPhotographyTests : XCTestCase
 
@@ -26,9 +27,21 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testBase64AuthGeneration
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSString* header = [WPUtils getBase64AuthHeaderWithUsername:@"carlos" andPassword:@"123"];
+    
+    XCTAssertEqualObjects(header, @"Basic Y2FybG9zOjEyMw==", @"base64 header comparison");
+}
+
+- (void)testRandomNumberGenerator
+{
+    int MAX = 3;
+    int MIN = 0;
+    
+    int rand1 = [WPUtils randomNumberWithMax:MAX andMin:MIN];
+    
+    XCTAssertTrue(rand1 >= MIN && rand1 <= MAX, @"check random number in range");
 }
 
 @end
