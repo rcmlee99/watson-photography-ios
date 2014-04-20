@@ -7,7 +7,7 @@ This is a sample iOS application for the IBM Watson Mobile Developer Challenge.
 
 ## Getting the Code
 
-1. Clone this Github repository: `git clone git@github.com:IBMMobileCoC/watson-photography-ios.git`.
+1. Clone this Github repository.
 
 2. Open the Xcode project: `cd watson-photography-ios && open WatsonPhotography.xcodeproj`
 
