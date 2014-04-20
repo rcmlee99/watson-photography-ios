@@ -52,10 +52,10 @@
         
         //Get the user and password from config.plist
         NSString* user = config[KEY_CONFIG_PLIST_USER];
-        NSString* pwd = config[KEY_CONFIG_PLIST_PASSWORD];
+        NSString* pass = config[KEY_CONFIG_PLIST_PASSWORD];
         
         //When no user or password is found, use fake data
-        if (![user length] || ![pwd length]) {
+        if (![user length] || ![pass length]) {
         
             NSLog(@"No user or password found in the config file, using fake data.");
             
@@ -63,11 +63,8 @@
             NSString *filePath = [[NSBundle mainBundle] pathForResource:FAKE_FILE_NAME ofType:FAKE_FILE_EXTENSION];
             NSData *data = [NSData dataWithContentsOfFile:filePath];
             
-            //Extract the useful bits (answers, evidence and the question text)
-            WPWatsonQuestionResponse* res = [WPUtils buildResponseObjectWithData:data];
-            
-            //Save it so we can reference it in our controllers
-            [self.responses setObject:res forKey:question];
+            //Save the response
+            [self _saveWithResponseData:data andQuestion:question];
 
             //Inform the caller we are done, nil means no error
             callback(nil);
@@ -83,7 +80,7 @@
             [request setValue:@"no-cache" forHTTPHeaderField:@"Cache-Control"];
             
             //The server uses basic auth, the format is: 'Basic base64(user:pass)'
-            NSString* authHeader = [WPUtils getBase64AuthHeaderWithUsername:user andPassword:pwd];
+            NSString* authHeader = [WPUtils getBase64AuthHeaderWithUsername:user andPassword:pass];
             [request setValue:authHeader forHTTPHeaderField:@"Authorization"];
             
             //Add the question to the post body
@@ -99,11 +96,8 @@
                  
                  } else {
                      
-                     //Extract the useful bits (answers, evidence and the question text)
-                     WPWatsonQuestionResponse* res = [WPUtils buildResponseObjectWithData:data];
-
-                     //Save it so we can reference it in our views
-                     [self.responses setObject:res forKey:question];
+                     //Save the response
+                     [self _saveWithResponseData:data andQuestion:question];
                  }
                 
                 //Inform the caller we are done
@@ -118,6 +112,17 @@
         //Inform the caller we are done, nil means no error
         callback(nil);
     }
+}
+
+#pragma mark PRIVATE
+
+-(void) _saveWithResponseData:(NSData*) data andQuestion:(NSString*) question
+{
+    //Extract the useful bits (answers and evidence)
+    WPWatsonQuestionResponse* res = [WPUtils buildResponseObjectWithData:data];
+    
+    //Save it so we can reference it in our controller
+    [self.responses setObject:res forKey:question];
 }
 
 @end
