@@ -38,11 +38,12 @@ extern NSString * const FAKE_FILE_EXTENSION;
 extern NSString * const PATH_TO_ANSWERS;
 extern NSString * const PATH_TO_EVIDENCE;
 
-extern NSString * const URL_WATSON_ASK_QUESTION;
+extern NSString * const URL_WATSON_ASK_QUESTION_TEMPLATE;
 extern NSString * const WATSON_ASK_QUESTION_PAYLOAD_TEMPLATE;
 
 extern NSString * const KEY_CONFIG_PLIST_USER;
 extern NSString * const KEY_CONFIG_PLIST_PASSWORD;
+extern NSString * const KEY_CONFIG_PLIST_WATSON_INSTANCE_ID;
 
 extern NSString * const CONFIG_PLIST_FILE_NAME;
 extern NSString * const CONFIG_PLIST_EXTENSION;

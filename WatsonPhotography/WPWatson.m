@@ -67,11 +67,12 @@
         //Get the user and password from config.plist
         NSString* user = config[KEY_CONFIG_PLIST_USER];
         NSString* pass = config[KEY_CONFIG_PLIST_PASSWORD];
+        NSString* instanceId = config[KEY_CONFIG_PLIST_WATSON_INSTANCE_ID];
         
         //When no user or password is found, use fake data
-        if (![user length] || ![pass length]) {
+        if (![user length] || ![pass length] || ![instanceId length]) {
         
-            NSLog(@"No user or password found in the config file, using fake data.");
+            NSLog(@"No user, password or instance id found in the config file, using fake data.");
             
             //Read data from fake.json
             NSString *filePath = [[NSBundle mainBundle] pathForResource:FAKE_FILE_NAME ofType:FAKE_FILE_EXTENSION];
@@ -86,7 +87,8 @@
         } else {
             
             //Pepare the url and request to contact the server
-            NSURL* url = [NSURL URLWithString:URL_WATSON_ASK_QUESTION];
+            NSString* urlWithInstanceId = [NSString stringWithFormat:URL_WATSON_ASK_QUESTION_TEMPLATE, instanceId];
+            NSURL* url = [NSURL URLWithString:urlWithInstanceId];
             NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
             [request setHTTPMethod: @"POST"];
             [request setValue:@"30" forHTTPHeaderField:@"X-SyncTimeout"];

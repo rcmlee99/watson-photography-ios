@@ -12,7 +12,7 @@ This is a sample iOS application for the IBM Watson Mobile Developer Challenge.
 
 2. Open the Xcode project: `cd watson-photography-ios && open WatsonPhotography.xcodeproj`
 
-3. Find the `config.plist` file in the `Supporting Files` group and add a username and password to contact the Watson API. If no username or password is provided, the application will get data from `fake.json` which is also in the the `Supporting Files` group.
+3. Find the `config.plist` file in the `Supporting Files` group and add a username, a password and the watson instance id number to contact the Watson API. If no username or password is provided, the application will get data from `fake.json` which is also in the the `Supporting Files` group. 
 
 4. Run the application!
 
@@ -34,7 +34,7 @@ This is a sample iOS application for the IBM Watson Mobile Developer Challenge.
 
 * **Supporting Files/fake.json** - Fake data in case we don't have access to the Watson API, or lack network connectivity, or we want to test with a slightly faster version (network communication is slow). The data is based on the 'what is aperture?' question.
 
-* **Supporting Files/config.plist** - This is what `WPWatson.m` will read to find the username and password to access the Watson API. If there's no username or password, `fake.json` will be used as the data source instead.
+* **Supporting Files/config.plist** - This is what `WPWatson.m` will read to find the username, password and instance id to access the Watson API. If there's no username or password, `fake.json` will be used as the data source instead.
 
 * **Controllers/WPMainViewController.m** - This is the first view controller that is loaded when the application starts. It has a text field (`self.questionTextField`) for getting question input from the user. It also has an 'Ask Watson' button that will trigger a call to `WPWatson.m` to get data and populate a table (our next view) with the answers.
 
@@ -42,7 +42,7 @@ This is a sample iOS application for the IBM Watson Mobile Developer Challenge.
 
 * **Controllers/WPResultsDetailsViewController.m** - This is the third view controller that is loaded, it's loaded when a cell containing an answer is clicked in the previous view. It shows Watson's confidence in the answer, the full answer and a random piece of evidence to back up the answer.
 
-* **Classes/WPWatson.m** - Singleton that sends questions to the Watson API if a username and password are found in `Supporting Files/config.plist`, otherwise it returns data from `Supporting Files/fake.json`. Questions are cached, if a user asks the same question again it will get it from the cache instead of contacting the server again. The cache is cleared after the forth question. Apple's [NSURLConnection](https://developer.apple.com/library/ios/documentation/cocoa/reference/foundation/classes/NSURLConnection_Class/Reference/Reference.html) API is used to make an asynchronous request to Watson's API, it's the same library that popular libraries like [AFNetworking](https://github.com/AFNetworking/AFNetworking) use internally.
+* **Classes/WPWatson.m** - Singleton that sends questions to the Watson API if a username, password and instance id are found in `Supporting Files/config.plist`, otherwise it returns data from `Supporting Files/fake.json`. Questions are cached, if a user asks the same question again it will get it from the cache instead of contacting the server again. The cache is cleared after the forth question. Apple's [NSURLConnection](https://developer.apple.com/library/ios/documentation/cocoa/reference/foundation/classes/NSURLConnection_Class/Reference/Reference.html) API is used to make an asynchronous request to Watson's API, it's the same library that popular libraries like [AFNetworking](https://github.com/AFNetworking/AFNetworking) use internally.
 
 * **Classes/WPWatsonQuestionResponse.m** - Simple object that will hold answers and evidence relevant to a specific question.
 
